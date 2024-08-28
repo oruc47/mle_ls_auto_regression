@@ -61,4 +61,4 @@ We can confirm that MLE is an accurate estimator for NLS as the parameter values
 
 We further see this pattern continue when we move to AR(2). There is no significant difference among the results of the parameters. We also consistently see that $\phi_2$ has relatively small parameter values, meaning that the $t-2$ errors cause fewer disturbances. However, we do notice that the $\sigma^2$ value is smaller for MLE, which means that MLE captures the nonlinear model more consistently than OLS. Finally, we cannot use both $t$ and $t-1$ as regressors, as it would introduce multicollinearity, since $t-1$ is perfectly correlated with $t$.
 
-**Full Report Can be Found: https://github.com/oruc47/mle_ls_auto_regression/blob/4930f36af5823a3283c9dedf7a89c6ba1f3566eb/major_assignment_report.pdf** 
+**[Full Report Can be Found Here](https://github.com/oruc47/mle_ls_auto_regression/blob/4930f36af5823a3283c9dedf7a89c6ba1f3566eb/major_assignment_report.pdf** 
