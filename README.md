@@ -13,7 +13,7 @@ This report presents the results and analysis of MLE and LS estimates of a simpl
 
 ## Model
 
-This is an AR(2) model where the errors of the model are influenced by both the $t-1$ period and the $t-2$ period. $\phi$ is an important variable of interest as it is the coefficient of the errors for each period. There will be cases where the model will be reduced to AR(1) by setting $phi_2 = 0$.
+This is an AR(2) model where the errors of the model are influenced by both the $t-1$ period and the $t-2$ period. $\phi$ is an important variable of interest as it is the coefficient of the errors for each period. There will be cases where the model will be reduced to AR(1) by setting $\phi_2 = 0$.
 
 $$
 y_t = \alpha + \beta t + u_t
