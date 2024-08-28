@@ -7,8 +7,8 @@ Analysis of the finite sample behavior of estimators and tests of regression mod
 
 ## Introduction
 
-This report presents the results and analysis of MLE and LS estimates of a simple autoregressive model. C++ was used to write and optimize both the log-likelihood and the LS functions. I first compute estimates for a simple version of the model and then later on perform Monte Carlo simulations to observe more complicated versions of the model and see if the estimates converge over time. I also hard-coded all the optimization functions to not use any packages. I implemented a simple version to [generate gradients](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L78C1-L92C2), [function to invert matricies](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L100C1-L136C2), 
-[gradient descent](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L148C1-L178C2), and to [generate hessian matricies](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L230C1-L255C1)
+This report presents the results and analysis of MLE and LS estimates of a simple autoregressive model. C++ was used to write and optimize both the log-likelihood and the LS functions. I first compute estimates for a simple version of the model and then later on perform Monte Carlo simulations to observe more complicated versions of the model and see if the estimates converge over time. I also hard-coded all the optimization functions to not use any packages. I implemented a simple version to [generate gradients](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L78C1-L92C2), [to invert matricies](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L100C1-L136C2), 
+[generate gradient descent](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L148C1-L178C2), and to [generate hessian matricies](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L230C1-L255C1)
 
 
 ## Model
@@ -61,4 +61,4 @@ We can confirm that MLE is an accurate estimator for NLS as the parameter values
 
 We further see this pattern continue when we move to AR(2). There is no significant difference among the results of the parameters. We also consistently see that $\phi_2$ has relatively small parameter values, meaning that the $t-2$ errors cause fewer disturbances. However, we do notice that the $\sigma^2$ value is smaller for MLE, which means that MLE captures the nonlinear model more consistently than OLS. Finally, we cannot use both $t$ and $t-1$ as regressors, as it would introduce multicollinearity, since $t-1$ is perfectly correlated with $t$.
 
-**[Full Report Can be Found Here](https://github.com/oruc47/mle_ls_auto_regression/blob/4930f36af5823a3283c9dedf7a89c6ba1f3566eb/major_assignment_report.pdf)** 
+**[Full Report Can be Found Here](https://github.com/oruc47/mle_ls_auto_regression/blob/777f3c408fd2dceed20e40b0a371f6f1c85a8bd1/major_assignment_report.pdf)** 
