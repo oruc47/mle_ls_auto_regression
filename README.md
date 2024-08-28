@@ -7,18 +7,16 @@ Analysis of the finite sample behavior of estimators and tests of regression mod
 
 ## Introduction
 
-This report presents the results and analysis of MLE and LS estimates of a simple autoregressive model. C++ was used to write and optimize both the log-likelihood and the LS functions. I first compute estimates for a simple version of the model and then later on perform Monte Carlo simulations to observe more complicated versions of the model and see if the estimates converge over time. I also hard-coded all the optimization functions to not use any packages. I implemented a simple version of gradient descent. The main results of the experiment are:
+This report presents the results and analysis of MLE and LS estimates of a simple autoregressive model. C++ was used to write and optimize both the log-likelihood and the LS functions. I first compute estimates for a simple version of the model and then later on perform Monte Carlo simulations to observe more complicated versions of the model and see if the estimates converge over time. I also hard-coded all the optimization functions to not use any packages. I implemented a simple version of gradient descent 
 
 ## Model
 
 This is an AR(2) model where the errors of the model are influenced by both the \(t-1\) period and the \(t-2\) period. \(\phi\) is an important variable of interest as it is the coefficient of the errors for each period. There will be cases where the model will be reduced to AR(1) by setting \(\phi_2 = 0\).
 
-\[
-\begin{aligned}
+$$
     y_t &= \alpha + \beta t + u_t \\
     u_t &= \phi_1 u_{t-1} + \phi_2 u_{t-2} + \varepsilon_t \quad \varepsilon_t \sim \text{NIID}(0, \sigma^2_\varepsilon) \quad \text{for} \quad t = 1, \ldots, T
-\end{aligned}
-\]
+$$
 
 ### Maximum Likelihood and Non-Linear Least Squares
 
@@ -56,6 +54,4 @@ We can confirm that MLE is an accurate estimator for NLS as the parameter values
 
 We further see this pattern continue when we move to AR(2). There is no significant difference among the results of the parameters. We also consistently see that \(\phi_2\) has relatively small parameter values, meaning that the \(t-2\) errors cause fewer disturbances. However, we do notice that the \(\sigma^2\) value is smaller for MLE, which means that MLE captures the nonlinear model more consistently than OLS. Finally, we cannot use both \(t\) and \(t-1\) as regressors, as it would introduce multicollinearity, since \(t-1\) is perfectly correlated with \(t\).
 
-## Simulation
 
-Below are the results of the simulation using different values of \(\phi\):
