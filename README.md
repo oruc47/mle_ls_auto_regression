@@ -7,7 +7,8 @@ Analysis of the finite sample behavior of estimators and tests of regression mod
 
 ## Introduction
 
-This report presents the results and analysis of MLE and LS estimates of a simple autoregressive model. C++ was used to write and optimize both the log-likelihood and the LS functions. I first compute estimates for a simple version of the model and then later on perform Monte Carlo simulations to observe more complicated versions of the model and see if the estimates converge over time. I also hard-coded all the optimization functions to not use any packages. I implemented a simple version of gradient descent 
+This report presents the results and analysis of MLE and LS estimates of a simple autoregressive model. C++ was used to write and optimize both the log-likelihood and the LS functions. I first compute estimates for a simple version of the model and then later on perform Monte Carlo simulations to observe more complicated versions of the model and see if the estimates converge over time. I also hard-coded all the optimization functions to not use any packages. I implemented a simple version of [gradient descent](https://github.com/oruc47/mle_ls_auto_regression/blob/a50b911b1a742f933baa170d412d19fdf1187049/func.cpp#L78C1-L92C2),
+
 
 ## Model
 
